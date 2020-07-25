@@ -1,0 +1,2 @@
+class ShiftBoard < ApplicationRecord
+end

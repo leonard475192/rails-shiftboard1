@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Store:</strong>
+  <%= @shift_board.store_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @shift_board.user_id %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @shift_board.date %>
+</p>
+
+<%= link_to 'Edit', edit_shift_board_path(@shift_board) %> |
+<%= link_to 'Back', shift_boards_path %>

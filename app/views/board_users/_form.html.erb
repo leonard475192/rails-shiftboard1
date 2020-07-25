@@ -1,0 +1,37 @@
+<%= form_with(model: board_user, local: true) do |form| %>
+  <% if board_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(board_user.errors.count, "error") %> prohibited this board_user from being saved:</h2>
+
+      <ul>
+        <% board_user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :display_name %>
+    <%= form.text_area :display_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :account_id %>
+    <%= form.number_field :account_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :store_id %>
+    <%= form.number_field :store_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :level %>
+    <%= form.number_field :level %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

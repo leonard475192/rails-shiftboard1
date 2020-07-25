@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Shift Boards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Store</th>
+      <th>User</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shift_boards.each do |shift_board| %>
+      <tr>
+        <td><%= shift_board.store_id %></td>
+        <td><%= shift_board.user_id %></td>
+        <td><%= shift_board.date %></td>
+        <td><%= link_to 'Show', shift_board %></td>
+        <td><%= link_to 'Edit', edit_shift_board_path(shift_board) %></td>
+        <td><%= link_to 'Destroy', shift_board, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shift Board', new_shift_board_path %>
